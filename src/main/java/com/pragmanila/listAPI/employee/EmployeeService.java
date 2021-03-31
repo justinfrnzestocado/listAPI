@@ -60,7 +60,7 @@ public class EmployeeService {
     public void updateEmployee(Long employeeId,
                                String name,
                                String email,
-                               String pnm{
+                               String pnm){
     Employee employee = employeeRepository.findById(employeeId).orElseThrow(() ->
             new IllegalStateException("Employee with id " + employeeId + " does not exists!")
     );
