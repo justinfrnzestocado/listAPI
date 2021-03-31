@@ -60,8 +60,7 @@ public class EmployeeService {
     public void updateEmployee(Long employeeId,
                                String name,
                                String email,
-                               String pnm,
-                               LocalDate dob) {
+                               String pnm{
     Employee employee = employeeRepository.findById(employeeId).orElseThrow(() ->
             new IllegalStateException("Employee with id " + employeeId + " does not exists!")
     );
@@ -83,11 +82,6 @@ public class EmployeeService {
            if ( pnm != null && pnm.length() > 0 && !Objects.equals(employee.getPnm(), pnm))
            {
                employee.setPnm(pnm);
-           }
-
-           if ( dob != null && !dob.equals(LocalDate.now()) && !Objects.equals(employee.getDob() ,dob))
-           {
-               employee.setDob(dob);
            }
     }
 }
