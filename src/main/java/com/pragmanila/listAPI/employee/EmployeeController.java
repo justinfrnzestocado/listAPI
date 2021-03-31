@@ -49,11 +49,10 @@ public class EmployeeController {
             @PathVariable("employeeId") Long employeeId,
             @RequestParam(required = false) String name,
             @RequestParam(required = false) String email,
-            @RequestParam(required = false) String pnm,
-            @RequestParam(required = false)LocalDate dob
+            @RequestParam(required = false) String pnm
             )
             {
-                employeeService.updateEmployee(employeeId, name, email, pnm, dob);
+                employeeService.updateEmployee(employeeId, name, email, pnm);
             }
 
 }
